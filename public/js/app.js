@@ -32,7 +32,7 @@ weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
     const loc = search.value
     console.log(loc)
-    fetch('http://localhost:3000/weather?address='+loc).then((response)=>{
+    fetch('/weather?address='+loc).then((response)=>{
     // mode: 'no-cors',
     response.json().then((data)=>{
         if(data.error){
